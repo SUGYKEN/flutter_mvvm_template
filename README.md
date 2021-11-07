@@ -1,16 +1,7 @@
 # mvvm_provider_template
 
-A new Flutter application.
+ MVVM + CleanArchitecture + Provider
 
-## Getting Started
+## Architecture
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img width="970" alt="スクリーンショット 2021-11-08 2 01 34" src="https://user-images.githubusercontent.com/77915965/140654618-af4f897b-8fd4-40d1-bc4f-d5e804cbd45d.png">
