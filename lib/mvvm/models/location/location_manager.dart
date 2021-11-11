@@ -3,7 +3,7 @@
 // APIの実行結果はそのまま使わずに、自分で定義したdata_modelに変換します。
 // data_modelへの変換までがModel層の責務としています。
 
-import 'package:mvvm_provider_template/data_model/location.dart';
+import 'package:mvvm_provider_template/mvvm/data_model/location.dart';
 class LocationManager {
 
   // 現在地を取得

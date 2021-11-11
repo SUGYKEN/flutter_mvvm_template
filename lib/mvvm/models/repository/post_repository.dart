@@ -8,11 +8,11 @@
 
 import 'dart:io';
 
-import 'package:mvvm_provider_template/data_model/location.dart';
-import 'package:mvvm_provider_template/data_model/post.dart';
-import 'package:mvvm_provider_template/data_model/user.dart';
-import 'package:mvvm_provider_template/models/db/database_manager.dart';
-import 'package:mvvm_provider_template/models/location/location_manager.dart';
+import 'package:mvvm_provider_template/mvvm/data_model/location.dart';
+import 'package:mvvm_provider_template/mvvm/data_model/post.dart';
+import 'package:mvvm_provider_template/mvvm/data_model/user.dart';
+import 'package:mvvm_provider_template/mvvm/models/db/database_manager.dart';
+import 'package:mvvm_provider_template/mvvm/models/location/location_manager.dart';
 
 class PostRepository {
 

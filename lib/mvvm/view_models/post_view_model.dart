@@ -9,9 +9,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:mvvm_provider_template/data_model/location.dart';
-import 'package:mvvm_provider_template/models/repository/post_repository.dart';
-import 'package:mvvm_provider_template/models/repository/user_repository.dart';
+import 'package:mvvm_provider_template/mvvm/data_model/location.dart';
+import 'package:mvvm_provider_template/mvvm/models/repository/post_repository.dart';
+import 'package:mvvm_provider_template/mvvm/models/repository/user_repository.dart';
 
 // 投稿のViewModel
 class PostViewModel extends ChangeNotifier {

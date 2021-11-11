@@ -6,8 +6,8 @@
 // data_modelへの変換には他のModel層の情報を必要とする場合があります。その場合はクラスの内部で定義したプロパティに外部からインスタンスを注入します！
 // 外部から注入することでdummyのModelを注入することも可能になります（テストコード）。
 
-import 'package:mvvm_provider_template/data_model/user.dart';
-import 'package:mvvm_provider_template/models/db/database_manager.dart';
+import 'package:mvvm_provider_template/mvvm/data_model/user.dart';
+import 'package:mvvm_provider_template/mvvm/models/db/database_manager.dart';
 
 class UserRepository {
   final DataBaseManager dbManager;

@@ -1,9 +1,9 @@
-import 'package:mvvm_provider_template/models/db/database_manager.dart';
-import 'package:mvvm_provider_template/models/location/location_manager.dart';
-import 'package:mvvm_provider_template/models/repository/post_repository.dart';
-import 'package:mvvm_provider_template/models/repository/user_repository.dart';
-import 'package:mvvm_provider_template/view_models/login_view_model.dart';
-import 'package:mvvm_provider_template/view_models/post_view_model.dart';
+import 'package:mvvm_provider_template/mvvm/models/db/database_manager.dart';
+import 'package:mvvm_provider_template/mvvm/models/location/location_manager.dart';
+import 'package:mvvm_provider_template/mvvm/models/repository/post_repository.dart';
+import 'package:mvvm_provider_template/mvvm/models/repository/user_repository.dart';
+import 'package:mvvm_provider_template/mvvm/view_models/login_view_model.dart';
+import 'package:mvvm_provider_template/mvvm/view_models/post_view_model.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 

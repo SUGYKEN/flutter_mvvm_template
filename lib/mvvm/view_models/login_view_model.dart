@@ -4,7 +4,7 @@
 // 状態を持ち、Viewには状態の変化だけ通知する役割を持ちます。
 
 import 'package:flutter/material.dart';
-import 'package:mvvm_provider_template/models/repository/user_repository.dart';
+import 'package:mvvm_provider_template/mvvm/models/repository/user_repository.dart';
 
 class LoginViewModel extends ChangeNotifier {
   final UserRepository userRepository; // 依存するModel

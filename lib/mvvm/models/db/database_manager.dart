@@ -3,9 +3,9 @@
 // 今後データベースがFirebase以外に変わっても使えるようにModel層のなかで連携部分は完結させます。
 // 一部のメソッドを例に残しています。FirebaseFireStoreと連携させていました。
 
-import 'package:mvvm_provider_template/data_model/post.dart';
-import 'package:mvvm_provider_template/data_model/user.dart';
-import 'package:mvvm_provider_template/models/repository/user_repository.dart';
+import 'package:mvvm_provider_template/mvvm/data_model/post.dart';
+import 'package:mvvm_provider_template/mvvm/data_model/user.dart';
+import 'package:mvvm_provider_template/mvvm/models/repository/user_repository.dart';
 
 class DataBaseManager {
 
