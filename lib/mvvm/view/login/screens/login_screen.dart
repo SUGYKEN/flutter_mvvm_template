@@ -27,7 +27,7 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 // styleは外部に定義しています
-                const Text("ログイン完了", style: loginTitleTextStyle,
+                const Text("未ログイン", style: loginTitleTextStyle,
                 ),
                 IconButton(
                   icon: const Icon(Icons.login_outlined),

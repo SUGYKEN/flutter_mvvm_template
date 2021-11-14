@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mvvm_provider_template/mvvm/view/post/pages/post_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -15,6 +16,8 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     _pages = [
+      const PostPage(),
+      const PostPage(),
     ];
     super.initState();
   }
@@ -33,7 +36,16 @@ class _HomeScreenState extends State<HomeScreen> {
             _currentIndex = index;
           });
         },
-        items: const [],
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label:"POST",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label:"POST2",
+          ),
+        ],
       ),
     );
   }

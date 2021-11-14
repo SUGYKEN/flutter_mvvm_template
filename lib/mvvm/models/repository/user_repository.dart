@@ -28,12 +28,9 @@ class UserRepository {
       // APIを実行してログインを実行する
       AuthUser? authUser = await dummy_signIn();
       if (authUser == null) { return false; }
-      // search DB(if none insert)
-      final isUserExist = await dbManager.searchUserInDb(authUser);
-      if (!isUserExist) await dbManager.insertUser(_convertToUser(authUser));
       return true;
     } catch (error) {
-      print("Error is (error)");
+      print("Error is ($error)");
     }
     return false;
   }
@@ -50,13 +47,17 @@ class UserRepository {
   }
 
   // dummyAPI
-  static bool dummy_isSignIn() {
-    return true;
+  Future<bool> dummy_isSignIn() async {
+    await Future.delayed(const Duration(seconds: 3)); // 3s wait
+    return false;
   }
 
   // dummyAPI
-  static Future<AuthUser?> dummy_signIn() async {
-    if (currentUser == null) { throw Error(); }
+  Future<AuthUser?> dummy_signIn() async {
+    await Future.delayed(const Duration(seconds: 3));  // 3s wait
+    if (currentUser == null) {
+      //throw Error(); // Errorの判定など
+    }
     return dummyAuthUser;
   }
 }

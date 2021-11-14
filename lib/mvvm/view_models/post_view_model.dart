@@ -50,6 +50,7 @@ class PostViewModel extends ChangeNotifier {
     isProcessing = true; // 状態を持ち
     notifyListeners(); // Viewに通知
     // Modelで何かしらの処理
+    // Repository からサーバーにPOSTメソッドを実行する、など。
     await postRepository.post(
         UserRepository.currentUser!,
         File("hoge/hoge"),
