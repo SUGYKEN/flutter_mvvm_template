@@ -1,7 +1,9 @@
 # mvvm_provider_template
 
  MVVM + CleanArchitecture + Provider
+ 
  [Sample Provider](https://flutter.dev/docs/development/data-and-backend/state-mgmt/simple)
+ 
  [Sample Provider Github](https://github.com/flutter/samples/tree/master/provider_shopper/lib)
 
 ## Architecture
