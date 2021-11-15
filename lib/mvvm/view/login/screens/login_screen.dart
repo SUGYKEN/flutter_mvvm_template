@@ -21,8 +21,17 @@ class LoginScreen extends StatelessWidget {
           builder: (context, model, child) {
             // ViewModelの状態を見てViewの表示内容を決めています
             if (model.isLoading) {
-              return const CircularProgressIndicator();
+              // loadingの状態であれば、loadingのViewを表示
+              return Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const <Widget>[
+                    Text("ログイン中"),
+                    CircularProgressIndicator()
+                  ]
+              );
             } else {
+              // Consumerで状態変化の通知を受け取っており、
+              // loadingが終了すれば、別の画面を表示する
               return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
