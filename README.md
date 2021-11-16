@@ -3,7 +3,13 @@
  MVVM + CleanArchitecture + Provider
  
  とてもSimpleな画面になっています。
- ![mvvm_temp](https://user-images.githubusercontent.com/77915965/141705756-a583905a-3c31-4650-955c-e60975db067c.gif)
+ - (仮想)ログイン画面
+ - タブありのホーム画面
+ - カメラの起動/写真アプリの起動画面
+　
+ viewModelからの通知・依頼・状態の取得、などが参考にできると思います！！
+![mvvm_temp](https://user-images.githubusercontent.com/77915965/142031019-f21cc36f-e91f-4048-8874-14c846085124.gif)
+
 
 ## Architecture
 
