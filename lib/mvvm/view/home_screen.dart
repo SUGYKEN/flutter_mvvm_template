@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mvvm_provider_template/mvvm/view/post/pages/post_page.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,6 +17,9 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     _pages = [
+      const PostPage(),
+      const PostPage(),
+      const PostPage(),
       const PostPage(),
       const PostPage(),
     ];
@@ -38,13 +42,25 @@ class _HomeScreenState extends State<HomeScreen> {
         },
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label:"POST",
-          ),
+              icon: FaIcon(FontAwesomeIcons.home),
+              label: "HOME"),
+          //title: Text(S.of(context).home)),
           BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
-            label:"POST2",
-          ),
+              icon: FaIcon(FontAwesomeIcons.search),
+              label: "SEARCH"),
+          //title: Text(S.of(context).search)),
+          BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.plusSquare),
+              label: "ADD"),
+          //title: Text(S.of(context).add)),
+          BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.heart),
+              label: "IINE"),
+          //title: Text(S.of(context).activities)),
+          BottomNavigationBarItem(
+              icon: FaIcon(FontAwesomeIcons.user),
+              label: "USER"),
+          //title: Text(S.of(context).user)),
         ],
       ),
     );

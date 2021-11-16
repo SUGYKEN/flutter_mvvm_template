@@ -9,6 +9,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:mvvm_provider_template/constants.dart';
 import 'package:mvvm_provider_template/mvvm/data_model/location.dart';
 import 'package:mvvm_provider_template/mvvm/models/repository/post_repository.dart';
 import 'package:mvvm_provider_template/mvvm/models/repository/user_repository.dart';
@@ -21,13 +22,17 @@ class PostViewModel extends ChangeNotifier {
 
   bool isProcessing = false; // 状態
   // model
-  Location? location; // 状態　
+  Location? location;
+  File? imageFile;
 
   // pick image
-  pickImage() async {
+  pickImage(UploadType uploadType) async {
     isProcessing = true;
     notifyListeners();
     // 何かしらの処理
+    // ここでは画像を取得して見てます
+    imageFile = await postRepository.pickImage(uploadType);
+
     isProcessing = false;
     notifyListeners();
   }

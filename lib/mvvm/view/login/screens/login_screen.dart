@@ -3,6 +3,8 @@
 // ViewとViewModelは、Providerで密に連携します、View側ではModelの監視、Modelの更新依頼、Modelからデータの取得を行います。
 
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:mvvm_provider_template/mvvm/view/common/button_with_icon.dart';
 import 'package:mvvm_provider_template/mvvm/view/home_screen.dart';
 import 'package:mvvm_provider_template/mvvm/view_models/login_view_model.dart';
 import 'package:mvvm_provider_template/style.dart';
@@ -25,7 +27,10 @@ class LoginScreen extends StatelessWidget {
               return Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const <Widget>[
-                    Text("ログイン中"),
+                    Text("Login"),
+                    SizedBox(
+                      height: 8.0,
+                    ),
                     CircularProgressIndicator()
                   ]
               );
@@ -36,11 +41,16 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 // styleは外部に定義しています
-                const Text("未ログイン", style: loginTitleTextStyle,
+                const Text("MVVM Template", style: loginTitleTextStyle,
                 ),
-                IconButton(
-                  icon: const Icon(Icons.login_outlined),
-                  onPressed: () => login(context),)
+                const SizedBox(
+                  height: 8.0,
+                ),
+                ButtonWithIcon(
+                  iconData: FontAwesomeIcons.signInAlt,
+                  label: "LOGIN",
+                  onPressed: () => login(context),
+                ),
               ],
             );
             }

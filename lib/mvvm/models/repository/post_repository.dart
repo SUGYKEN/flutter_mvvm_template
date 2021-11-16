@@ -8,6 +8,8 @@
 
 import 'dart:io';
 
+import 'package:image_picker/image_picker.dart';
+import 'package:mvvm_provider_template/constants.dart';
 import 'package:mvvm_provider_template/mvvm/data_model/location.dart';
 import 'package:mvvm_provider_template/mvvm/data_model/post.dart';
 import 'package:mvvm_provider_template/mvvm/data_model/user.dart';
@@ -42,5 +44,20 @@ class PostRepository {
         longitude: (location != null) ? location.longitude : 0.0 ,
         postDateTime: DateTime.now());
     await dbManager.insertPost(post); // dbManagerのinsertPost
+  }
+
+  pickImage(UploadType uploadType) async {
+    // ライブラリで画像の取得は簡単にできます
+    final imagePicker = ImagePicker();
+
+    if (uploadType == UploadType.GALLERY) {
+      final pickedImage =
+          await imagePicker.pickImage(source: ImageSource.gallery);
+      return (pickedImage != null) ? File(pickedImage.path): null;
+    } else {
+      final pickedImage =
+          await imagePicker.pickImage(source: ImageSource.camera);
+      return (pickedImage != null) ? File(pickedImage.path): null;
+    }
   }
 }

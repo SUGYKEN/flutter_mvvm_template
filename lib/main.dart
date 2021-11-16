@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mvvm_provider_template/di/providers.dart';
+import 'package:mvvm_provider_template/style.dart';
 import 'package:provider/provider.dart';
 
 import 'mvvm/view/home_screen.dart';
@@ -26,9 +27,12 @@ class MyApp extends StatelessWidget {
     // 読み取るだけ。値の変化はキャッチしないのでlisten false。
     final loginViewModel = Provider.of<LoginViewModel>(context, listen: false);
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+        title: 'MVVM Template',
+        debugShowCheckedModeBanner: false,// デフォルトはtrueになっていてアプリの右上にリボンが表示されます
+        theme: ThemeData(
+          brightness: Brightness.dark,
+          primarySwatch: Colors.blue,
+          fontFamily: RegularFont // ここでFontの設定も可能です
       ),
         // futureBuilderはfutureに設定する非同期処理の完了でWidgetがBuildされる。
         home: FutureBuilder(
